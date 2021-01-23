@@ -5,19 +5,16 @@ import shutil
 import csv    
 
 # Set variables
-apiKey = 'ImgBB_API_Key' 		# insert your ImgBB API key
+apiKey = 'ImgBB_API_Key' 		                # ImgBB API key
 imgPath = "./img/" 					# image path
-uploadedFilePath = imgPath + '/uploaded/' 			# move images to other folder after uploaded
+uploadedFilePath = imgPath + '/uploaded/' 	        # move images to other folder after uploaded
 extentions = [".jpg", ".jpeg", ".png", ".gif",".webp"]	# Image extentions
 csvFileName = 'ImageURLs.csv' 				# Save URLs for each images
 
 
 # Create directories if not exists
-if not os.path.exists(imgPath):
-    os.makedirs(imgPath)
-
-if not os.path.exists(uploadedFilePath):
-    os.makedirs(uploadedFilePath)
+os.makedirs(imgPath, exist_ok=True)
+os.makedirs(uploadedFilePath, exist_ok=True)
 
 # Initialize CSV file
 file_exists = os.path.isfile(csvFileName) 			# Check CSV file exists
