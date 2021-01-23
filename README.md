@@ -1,7 +1,7 @@
 # ImgBB-uploader
 
 ## Description
-Upload images to ImgBB, save URLs and move files to "upload complete directory"
+Upload images to ImgBB, save URLs and move files to other directory
 
 ## Variable setup
 | Variable Name | Description  |
